@@ -1,0 +1,15 @@
+{
+  "name": "operation-on-romans",
+  "version": "1.0.0",
+  "description": "demo application",
+  "main": "lib/jasmine_examples/Operations.js",
+  "dependencies": {
+    "jasmine": "^2.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abhilash Ranjan <ranjanabhilash111@gmail.com>",
+  "license": "ISC"
+}
