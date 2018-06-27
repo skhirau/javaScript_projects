@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="modules/listApp/assets/styles/style.css" type="text/css">
+<div class="complete-content" style="margin-top:70px; background:rgba(252,252,252,1); border-bottom:1px inset #D7D7D7;" ng-init="initilaize()">
+    <div class="container" style="padding:0px;">
+        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" align="left" id="heading">GitHub Issue Stats</div>
+        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" align="right" id="headingright"></div>
+        <br>
+        <br>
+    </div>
+</div>
+<div class="complete-content">
+    <div class="container" style="padding:0px;">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="background:#FFF; margin-top:25px; padding:15px 15px; position:relative;">
+
+
+            <div id="title" style="margin:0px; padding: 5px; display: none; font-size: 20px; font-weight: 500; padding-left:10px; font-family: 'Oswald'">
+                Github Repository Url
+            </div>
+            <div id="note">
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model="repositoryName" placeholder="search repository!!" />
+                </div>
+            </div>
+            <div id="taskMenu" style="height:35px !important; display: none; margin:0px; padding: 0px; margin-bottom: 10px;">
+                <div class="form-group">
+                    <button type="click" class="btn btn-success" ng-click="getIssuesStatistics()">SEARCH</button>
+                    <span class="text-danger">{{ error }}</span>
+                </div>
+            </div>
+
+
+
+            <div class="container" ng-show="showStatistics">
+                <h2>Issue Statistics!!</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Open Issues <span class="badge">{{openIssues}}</span></li>
+                    <li class="list-group-item">Average Age for Open Issues <span class="badge">{{averageAgeForIssue}}</span></li>
+                    <li class="list-group-item">Oldest open issue Date<span class="badge">{{oldestOpenIssueDate}}</span></li>
+                    <li class="list-group-item">Latest open issue Date <span class="badge">{{latestOpenIssueDate}}</span></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container" ng-show="showStatistics">
+            <table class="table">
+                <thead class="thead-default">
+                    <tr>
+                        <th>S.No</th>
+                        <th>Issue title</th>
+                        <th>Created date</th>
+                        <th>comments</th>
+                        <th>last updated</th>
+                        <th>labels </th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="item in issueData">
+                    <tr>
+                        <th scope="row">{{currentPage + $index+1}}</th>
+                        <td>{{item.title}}</td>
+                        <td>{{item.created_at}}</td>
+                        <td>{{item.comments}}</td>
+                        <td>{{item["updated_at"]}}</td>
+                        <td>{{item.labels[0].name}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <nav aria-label="Page navigation">
+              <ul class="pagination">
+                <li class="page-item" ng-repeat="value in pagination" ng-click="getIssuesStatisticsOnPagination($index + 1)">
+                    <a class="page-link" href="#">{{value}}</a>
+                </li>
+              </ul>
+            </nav>
+        </div>
+    </div>
+</div>
