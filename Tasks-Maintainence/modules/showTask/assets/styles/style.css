@@ -1,0 +1,38 @@
+.postheading {
+    font-family: Abel;
+    font-size: 22px;
+    color: #3B3B3B;
+    cursor: pointer;
+    padding: 0px;
+    padding-bottom: 10px;
+}
+
+.postheading:hover {
+    color: #74C52C;
+}
+
+.editor {
+    border-top: 1px solid #E1E1E1;
+    font-size: 13px;
+    color: #575757;
+    font-family: Raleway;
+    padding: 0px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.whiteframeOptions > div{
+    border-bottom: 1px dotted #C1C1C1;
+    height: auto;
+    line-height: 15px;
+    font-family: Raleway;
+    cursor: pointer;
+    padding-left: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.highlightView{
+    background-color: rgba(220, 220, 220, 0.7);
+    font-weight: 600;
+}
