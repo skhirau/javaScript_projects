@@ -1,0 +1,166 @@
+<link rel="stylesheet" href="modules/header/assets/styles/style.css" type="text/css">
+<div class="page-header">
+    <div class="container-fluid layer1 hidden-sm hidden-xs">
+      <div align="center" class="col-lg-2 col-md-2 hidden-sm hidden-xs layer1_1">
+        <a href="index.html">
+          <img src="modules/header/assets/images/images.png" style="padding-left:0px; height:35px; margin-top:3px;" />
+        </a>
+      </div>
+      <div align="center" class="col-lg-5 col-md-5 hidden-sm hidden-xs layer1_2">
+            <a href="#">
+                Home
+            </a>
+            <a href="#">
+                Category 1
+            </a>
+            <a href="#">
+                Category 2
+            </a>
+            <a href="#">
+                Category 3
+            </a>
+        </div>
+      <div align="right" class="col-lg-2 col-md-2 hidden-sm hidden-xs pull-right layer1_4">
+             <input type="text" id="search" placeholder="Search" name="search" />
+        </div>
+      <div align="right" class="col-lg-1 col-md-1 hidden-sm hidden-xs pull-right layer1_5">
+       <div style="width:30px; height:30px;">
+          <i class="fa fa-search"></i>
+       </div>
+      </div>
+      <div align="right" class="col-lg-2 col-md-2 hidden-sm hidden-xs pull-right layer1_3">
+          Login/Register
+      </div>
+    </div>
+    <div class="container-fluid layer2 hidden-lg hidden-md">
+      <div align="center" class="col-sm-12 col-xs-12 hidden-lg hidden-md layer2_2">
+            <a href="index.html">
+                <img src="modules/header/assets/images/images.png" style="padding-left:0px; height:35px; margin-top:17px;" />
+            </a>
+        </div>
+      <div align="center" class="col-sm-1 col-xs-1 hidden-lg hidden-md pull-left layer21" ng-click="showcategory()">
+             <div style="width:30px; height:30px; margin-top:20px;"><i class="fa fa-bars"></i></div>
+        </div>
+      <div align="right" class="col-sm-9 col-xs-9 hidden-lg hidden-md pull-right layer2_3">
+             <input type="text" id="search1" placeholder="Search" name="search" />
+        </div>
+      <div align="right" class="col-sm-2 col-xs-2 hidden-lg hidden-md pull-right layer2_4">
+             <div style="width:30px; height:30px; margin-top:20px;"><i class="fa fa-search"></i></div>
+        </div>
+    </div>
+</div>
+
+<div class="back" ng-click="showcategory()"></div>
+<div class="menuoptions">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 profile">
+      <div class="profileimage">
+          <img src="modules/header/assets/images/IMG_20140816_190017.jpg" style="width:100%;" />
+        </div>
+        <p class="name">Abhilash Ranjan</p>
+        <p class="email">abhilashranjaniitr@gmail.com</p>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menucategories">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt">
+          <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-home" id="icon"></i> 
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname">Home</div>
+        </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt">
+          <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-pencil" id="icon"></i> 
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname">Category 1</div>
+        </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt" id="math">
+          <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-caret-right m" id="icon"></i> 
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname">Category 2</div>
+        </div>
+        
+        
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="maths" style="display:none;">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt1">
+              <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-angle-right" id="icon1"></i> 
+              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname1">Category</div>
+          </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt1">
+              <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-angle-right" id="icon1"></i> 
+              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname1">Category</div>
+          </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt1">
+              <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-angle-right" id="icon1"></i> 
+              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname1">Category</div>
+          </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt1">
+              <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-angle-right" id="icon1"></i> 
+              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname1">Category</div>
+          </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt1">
+              <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-angle-right" id="icon1"></i> 
+              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname1">Category</div>
+          </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt1">
+              <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-angle-right" id="icon1"></i> 
+              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname1">Category</div>
+          </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt1">
+              <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-angle-right" id="icon1"></i> 
+              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname1">Category</div>
+          </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt1">
+              <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-angle-right" id="icon1"></i> 
+              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname1">Category</div>
+        </div>
+      </div>
+        
+        
+        
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt" id="phy">
+          <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-caret-right p" id="icon"></i> 
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname">Category</div>
+        </div>
+        
+        
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="physics" style="display:none;">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt1">
+                <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-angle-right" id="icon1"></i> 
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname1">Category</div>
+            </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt1">
+                <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-angle-right" id="icon1"></i> 
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname1">Category</div>
+            </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt1">
+                <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-angle-right" id="icon1"></i> 
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname1">Category</div>
+            </div>
+        </div>
+        
+        
+        
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt" id="phy">
+          <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-comments" id="icon"></i> 
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname">Category</div>
+        </div>
+
+
+        
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border-bottom:1px solid #D5D5D5; height:15px; margin-bottom:15px;">
+          </div>
+        </div>
+        
+        
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt">
+          <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-sign-in" id="icon"></i> 
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname">sign-in</div>
+        </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt">
+          <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-sign-out" id="icon"></i> 
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname">sign-out</div>
+        </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catopt">
+          <i class="col-lg-3 col-md-3 col-sm-3 col-xs-3 fa fa-cogs" id="icon"></i> 
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="iconname">settings</div>
+        </div>
+        
+    </div>
+   
+
+</div>    

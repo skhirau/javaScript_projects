@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="modules/board/assets/styles/style.css" type="text/css">
+<div class="complete-content" style="margin-top:70px; background:rgba(252,252,252,1); border-bottom:1px inset #d8d1d1;">
+    <div class="container" style="padding:0px;">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" align="left" id="heading">
+            Questions
+            <md-button class="pull-right md-raised md-success" ng-if="noNext" ng-click="next()">
+                Next
+            </md-button>
+            <md-button class="pull-right md-raised md-success" ng-if="noPrev" ng-click="previous()">
+                previous
+            </md-button>
+        </div>
+    </div>
+</div>
+<div style="padding:0px;">
+    <div class="col-md-4 col-lg-4 hide-sm hide-xs" style="background: rgb(252, 252, 252); margin:0px; padding:0px; position:relative; border-right: 1px solid #d8d1d1; height: inherit;">
+        <div ng-repeat="question in questionList" class="question" ng-click="updateQuestion($index)">
+            <span class="quesIndex" ng-if="question.selectedOption === undefined || question.selectedOption === -1">{{$index+1}}</span>
+            <span class="quesIndexNotAttempted" ng-if="question.selectedOption !== undefined && question.selectedOption >= 0">{{$index+1}}</span>
+            <span ng-if="question.text.length > 50">{{question.text.substr(0, 50)}}...</span>
+            <span ng-if="question.text.length <= 50">{{question.text}}</span>
+        </div>
+    </div>
+    <question class="col-md-8 col-lg-8 col-sm-12 col-xs-12" style="background:#FFF; padding: 0; padding-top:10px;"></question>
+</div>
+<footer class="footer">
+  <div class="container-fluid">
+    <md-button class="pull-right md-raised md-primary" ng-click="submitAll()">
+        SUBMIT All
+    </md-button>
+  </div>
+</footer>
+
+<custom-whiteframe name="Quiz Result" style="display: none;" id="showQuizResult">
+<canvas width="400" height="350" id="quizReultGraph"></canvas>
+</custom-whiteframe>

@@ -1,0 +1,39 @@
+<style type="text/css">
+    .questionOption{
+        height: 44px;
+        font-size: 21px;
+        font-family: 'Lato';
+        padding: 5px 22px;
+        background: #efecec;
+        cursor: pointer;
+        margin-bottom: 5px;
+        outline: none;
+    }
+    .selectedOption > span{
+        color: #2bc30f;
+        font-size: 22px;
+        outline: none;
+    }
+    .selectedOption > span:active{
+        
+    }
+</style>
+<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="background:#FFF; font-size: 22px; font-family: 'Raleway'; color: #2bc30f">
+    Question #{{question.index + 1}}   
+</div>
+<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="background:#FFF; font-size: 17px; font-family: 'Open Sans'; color: #000; margin-bottom: 10px;">
+    {{question.text}}   
+</div>
+<div class="questionOption col-md-12 col-lg-12 col-sm-12 col-xs-12" ng-repeat="option in question.options" ng-click="selectOption($index)" ng-class="{selectedOption: question.selectedOption === $index}">
+    <span>
+        <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+    </span>
+    <span>{{option}}</span>
+</div>
+
+    <md-button class="pull-left md-success md-raisedleft" ng-disabled="question.selectedOption === -1" ng-click="submit()">
+        SUBMIT
+    </md-button>
+    <md-button class="pull-left md-warn md-raisedleft" ng-disabled="question.selectedOption === -1" ng-click="clear()">
+        Clear
+    </md-button>
