@@ -1,0 +1,82 @@
+<span style="color:#74C52C; cursor: pointer;" ng-click="addTask()">+&nbsp;&nbsp;Add Task</span>
+<style type="text/css">
+    
+
+.addTaskInput{
+    outline: none;
+    width: 100%;
+    height: 35px!important;
+    border-radius: 3px;
+    padding-left: 20px;
+    background: transparent;
+    border: 1px solid #CCCCCC;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+</style>
+<custom-whiteframe name="Add Task" style="display: none;">
+    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div class="col-md-4 col-lg-4 col-sm-5 col-xs-5 whiteframeOptions" style="padding: 0; margin: 0; height: inherit; border-right: 1px solid #C1C1C1;">
+            <div layout="row" ng-click="changeView('Info')" ng-class="{highlightView: showView === 'Info'}">
+                Info
+            </div>
+            <div layout="row" ng-click="changeView('Action')" ng-class="{highlightView: showView === 'Action'}">
+                Action Type Operation
+            </div>
+            <div layout="row" ng-click="changeView('Attribute')" ng-class="{highlightView: showView === 'Attribute'}">
+                Action Attribute
+            </div>
+        </div>
+        <form name="addTaskForm" class="form-group col-md-8 col-lg-8 col-sm-7 col-xs-7 whiteframeOptionValue" style="padding: 0; margin: 0; height: inherit; overflow-y: auto; overflow-x: hidden;">
+            <div layout="row" ng-show="showView === 'Info'">
+                <font>Info</font>
+                <div layout="row">
+                    <span class="col-xs-6 col-sm-6 col-md-4 col-lg-4">Legal Action</span>
+                    <span class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
+                        <input class="form-control addTaskInput" placeholder="Legal Action" type="text" ng-model="legalAction" ng-change="change('legalAction', legalAction)" name="legalAction" />
+                    </span>
+                </div>
+                <div layout="row">
+                    <span class="col-xs-6 col-sm-6 col-md-4 col-lg-4">Template</span>
+                    <span class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
+                        <input class="form-control addTaskInput" placeholder="Template" type="text" ng-model="Template" ng-change="change('Template', Template)" name="Template"  />
+                    </span>
+                </div>
+                <div layout="row">
+                    <span class="col-xs-6 col-sm-6 col-md-4 col-lg-4">Historical</span>
+                    <span class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
+                        <input class="form-control addTaskInput" placeholder="Historical" type="text" ng-model="Historical" ng-change="change('Historical', Historical)" name="Historical"  />
+                    </span>
+                </div>
+            </div>
+            <div layout="row" ng-show="showView === 'Action'">
+                <font>Action Type Operation</font>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin: 0; padding: 0;">
+                    <div layout="row" style="padding: 0; margin: 0;">
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">Operation</div>
+                        <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
+                            <input class="form-control addTaskInput" placeholder="Operation" type="text" ng-model="Operation" ng-change="change('Operation', Operation)" name="Operation" />
+                        </div>
+                    </div>
+                    <div layout="row" style="padding: 0; margin: 0;">
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">url</div>
+                        <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
+                            <input class="form-control addTaskInput" placeholder="url" type="text" ng-model="attributeurl" ng-change="change('attributeurl', attributeurl)" name="attributeurl" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div layout="row" ng-show="showView === 'Attribute'">
+                <font>Action Attribute</font>
+                <div layout="row">
+                    <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">Value</span>
+                    <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <input class="form-control addTaskInput" placeholder="Value" type="text" ng-model="attributeValue" ng-change="change('attributeValue', attributeValue)" name="attributeValue" />
+                    </span>
+                </div>
+
+            </div>
+            <button type="submit" ng-disabled="enableAfterFilling" class="btn btn-default" ng-click="submit()">Submit</button>
+        </form>
+    </div>
+</custom-whiteframe>
