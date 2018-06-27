@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>List Manager</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,800,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200,300,400,100' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    
+</head>
+
+<body ng-app="listApp" style="position: relative;">
+    <widget></widget>
+    <header></header>
+    <list-app></list-app>
+
+    <div id="loading-wrapper">
+        <md-whiteframe id="loading-box" class="md-whiteframe-24dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
+            <md-progress-circular md-mode='indeterminate' md-diameter='20px'></md-progress-circular>
+            <div id='loading-msg'>loading ...</div>
+        </md-whiteframe>
+    </div>
+    <script type="text/javascript" src="libraries/AngularJS/angular.min.js"></script>
+    <script type="text/javascript" src="libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="libraries/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+    <script src="libraries/AngularJS/angular-animate.min.js"></script>
+    <script src="libraries/AngularJS/angular-aria.min.js"></script>
+    <script src="libraries/AngularJS/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+    <!--listApp-->
+    <script type="text/javascript" src="modules/listApp/listApp.module.js"></script>
+    <script type="text/javascript" src="modules/listApp/controllers/listApp.controller.js"></script>
+    <script type="text/javascript" src="modules/listApp/directives/listApp.directive.js"></script>
+    <script type="text/javascript" src="modules/listApp/services/listApp.service.js"></script>
+
+    <!--header-->
+    <script type="text/javascript" src="modules/header/header.module.js"></script>
+    <script type="text/javascript" src="modules/header/controllers/header.controller.js"></script>
+    <script type="text/javascript" src="modules/header/directives/header.directive.js"></script>
+
+
+</body>
+
+</html>
