@@ -1,0 +1,44 @@
+{
+    "count": 20,
+    "teams": [
+    {
+        "id": 1,
+        "name": "Manchester United FC",
+        "code": "MUFC",
+        "shortName": "ManU",
+        "squadMarketValue": null,
+        "crestUrl": "http://upload.wikimedia.org/wikipedia/de/d/da/Manchester_United_FC.svg"
+    },
+    {
+        "id": 2,
+        "name": "Tottenham Hotspur FC",
+        "code": "THFC",
+        "shortName": "Spurs",
+        "squadMarketValue": null,
+        "crestUrl": "http://upload.wikimedia.org/wikipedia/de/b/b4/Tottenham_Hotspur.svg"
+    },
+    {
+        "id": 3,
+        "name": "AFC Bournemouth",
+        "code": "AFCB",
+        "shortName": "Bournemouth",
+        "squadMarketValue": null,
+        "crestUrl": "https://upload.wikimedia.org/wikipedia/de/4/41/Afc_bournemouth.svg"
+    },
+    {
+        "id": 4,
+        "name": "Aston Villa FC",
+        "code": "AVFC",
+        "shortName": "Aston Villa",
+        "squadMarketValue": null,
+        "crestUrl": "http://upload.wikimedia.org/wikipedia/de/9/9f/Aston_Villa_logo.svg"
+    },
+    {
+        "id": 5,
+        "name": "Everton FC",
+        "code": "EFC",
+        "shortName": "Everton",
+        "squadMarketValue": null,
+        "crestUrl": "http://upload.wikimedia.org/wikipedia/de/f/f9/Everton_FC.svg"
+    }]
+}

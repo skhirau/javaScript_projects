@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="modules/listApp/assets/styles/style.css" type="text/css">
+<style type="text/css">
+    .selected{
+    font-size: 20px;
+    font-color: #161616;
+    border: 1px solid #161616;
+    font-family: 'Raleway'
+}
+</style>
+<div class="complete-content" style="margin-top:70px; background:rgba(252,252,252,1); border-bottom:1px inset #D7D7D7;" ng-init="initilaize()">
+    <div class="container" style="padding:0px;">
+        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" align="left" id="heading">Football League</div>
+        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" align="right" id="headingright"></div>
+        <br>
+        <br>
+    </div>
+</div>
+<div class="complete-content">
+    <div class="container" style="padding:0px;">
+        Selected Player
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="background:#FFF; margin-top:25px; padding:15px 15px;">
+            <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3" ng-repeat="selectedPlayer in selected">
+                <div>
+                    Name : {{selectedPlayer.name}}
+                </div>
+                <div>
+                    Position: {{selectedPlayer.position}}
+                </div>
+                <div>
+                    jerseyNumber: {{selectedPlayer.jerseyNumber}}
+                </div>
+                <div>
+                    nationality: {{selectedPlayer.nationality}}
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="background:#FFF; margin-top:25px; padding:15px 15px; position:relative;" ng-show="autoComplete">
+
+            Select a player
+            <input type="select" ng-model="selectedPlayerInSelect" ng-click="showAuto()" />
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" ng-repeat="player in showPlayers" ng-show="showAutoCompleteValues" ng-click="fill(player)" ng-class="{selected: selectPlayerName === player.name}" ng-mouseover="update($index)">
+                {{player.name}}
+            </div>
+            
+        </div>
+
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="background:#FFF; margin-top:25px; padding:15px 15px; position:relative;">
+
+            <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3" ng-repeat="team in teams" ng-click="showTeamList(team.id)" style="height: 50px; border: 1px solid #161616; line-height: 32px; padding: 10px; margin: 10px;">
+                {{team.name}}
+            </div>
+            
+        </div>
+    </div>
+</div>
